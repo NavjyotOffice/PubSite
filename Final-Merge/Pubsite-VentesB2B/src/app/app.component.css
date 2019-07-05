@@ -1,0 +1,10 @@
+.noDropDownContent > a::after{
+    content: none !important;
+}
+a.f1-s-5.cl3.hov-cl10.trans-03:hover {
+  color: #17b978;
+}
+
+a.f1-s-5.cl3.hov-cl10.trans-03 {
+  cursor: pointer;
+}

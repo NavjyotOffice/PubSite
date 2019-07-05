@@ -1,0 +1,68 @@
+@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<Pubsite_VentesB2B.Models.Resource>
+
+@{
+  ViewBag.Title = "Index";
+  Layout = "~/Views/Shared/_TemplateLayout.cshtml";
+}
+
+<h2>Search Events</h2>
+@using (Html.BeginForm("Index", "Resources", FormMethod.Get))
+{
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="searchText" name="searchText" placeholder="Search" aria-label="News Title" aria-describedby="basic-addon2">
+          <input type="hidden" class="form-control" id="Type" name="Type" value="@Request.QueryString["Type"]" />
+          <div class="input-group-append">
+            <input type="submit" id="btnSubmit" class="input-group-text" />
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+  </div>
+}
+<p>
+  @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.First().ContentDetail.Title)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.First().ContentDetail.Description)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.First().ResourceType)
+    </th>
+    <th></th>
+  </tr>
+
+  @foreach (var item in Model)
+  {
+<tr>
+  <td>
+    @Html.DisplayFor(modelItem => item.ContentDetail.Title)
+  </td>
+  <td>
+    @Html.DisplayFor(modelItem => item.ContentDetail.Description)
+  </td>
+  <td>
+    @Html.DisplayFor(modelItem => item.ResourceType)
+  </td>
+  <td>
+    @Html.ActionLink("Details", "Details", new { id = item.ResourcesID })
+  </td>
+</tr>
+  }
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, Type = Request.QueryString["Type"], searchText = Request.QueryString["searchText"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })

@@ -1,0 +1,73 @@
+	<!-- Breadcrumb -->
+	<div class="container">
+		<div class="bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+			<div class="f2-s-1 p-r-30 m-tb-6">
+				<a [routerLink]="['/']" class="breadcrumb-item f1-s-3 cl9">
+					Home 
+				</a>
+
+				<span class="breadcrumb-item f1-s-3 cl9">
+					Resources
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Page heading -->
+	<div class="container p-t-4 p-b-10">
+		<h2 class="f1-l-1 cl2">
+			Resources
+		</h2>
+  </div>
+  
+	<!-- Post -->
+	<section class="bg0 p-t-10 p-b-55">
+		<div class="container">
+			<div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8 p-b-80">
+          <div class="row">
+            <div class="col-sm-6 p-r-25 p-r-15-sr991" *ngFor="let resource of resourcesList| slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+              <!-- Item latest -->
+              <div class="m-b-45">
+                <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="wrap-pic-w hov1 trans-03">
+                  <img [src]="resource?.ContentDetail?.Image" alt="IMG">
+                </a>
+
+                <div class="p-t-16">
+                  <h5 class="p-b-5">
+                    <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                      {{resource?.ContentDetail?.Title}}
+                    </a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <!--<div class="flex-wr-s-c m-rl--7 p-t-15">
+    <a href="#" class="flex-c-c pagi-item hov-btn1 trans-03 m-all-7 pagi-active">1</a>
+    <a href="#" class="flex-c-c pagi-item hov-btn1 trans-03 m-all-7">2</a>
+  </div>-->
+          <ngb-pagination [(page)]="page"
+                          [pageSize]="pageSize"
+                          [collectionSize]="resourcesList.length"
+                          [maxSize]="5"
+                          [rotate]="true"
+                          [boundaryLinks]="true"></ngb-pagination>
+        </div>
+
+				<div class="col-md-10 col-lg-4 p-b-80">
+          <div class="p-l-10 p-rl-0-sr991">
+
+            <app-most-popular></app-most-popular>
+
+            <div class="flex-c-s p-t-8">
+              <a target="_blank" href="http://ventesb2b.com/">
+                <img class="max-w-full" [src]="['/dist/Infotech/assets/images/300x600.png']" alt="IMG">
+              </a>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</section>

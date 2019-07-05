@@ -1,0 +1,184 @@
+<!-- News -->
+<div class="tab01 p-b-20">
+  <div class="tab01-head how2 how2-cl1 bocl12 flex-s-c m-r-10 m-r-0-sr991">
+    <!-- Brand tab -->
+    <h3 class="f1-m-2 cl12 tab01-title">
+      News
+    </h3>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#tab1-1" role="tab">All</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab1-2" role="tab">Featured</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab1-3" role="tab">Trending</a>
+      </li>
+
+      <li class="nav-item-more dropdown dis-none">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-ellipsis-h"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+          
+        </ul>
+      </li>
+    </ul>
+
+    <!--  -->
+    <a [routerLink]="['News']" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
+      View all
+      <i class="fs-12 m-l-5 fa fa-caret-right"></i>
+    </a>
+  </div>
+    
+
+  <!-- Tab panes -->
+  <div class="tab-content p-t-35">
+    <!-- - -->
+    <div class="tab-pane fade show active" id="tab1-1" role="tabpanel">
+      <div class="row">
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="m-b-30">
+            <a [routerLink]="['../NewsDetails/'+news[0]?.NewsID]" class="wrap-pic-w hov1 trans-03">
+              <img [src]="news[0]?.ContentDetail?.Image" alt="IMG">
+            </a>
+            <div class="p-t-20">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../NewsDetails/'+news[0]?.NewsID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                  {{news[0]?.ContentDetail?.Title}} 
+                </a>
+              </h5>
+              <span class="cl8">
+                <span class="f1-s-3">
+                  {{news[0]?.NewsDate | date}}
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="flex-wr-sb-s m-b-30" *ngFor="let news of news | slice:1">
+            <a [routerLink]="['../NewsDetails/'+news?.NewsID]" class="size-w-1 wrap-pic-w hov1 trans-03">
+              <img [src]="news?.ContentDetail?.Image" alt="IMG">
+            </a>
+            <div class="size-w-2">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../NewsDetails/'+news?.NewsID]" class="f1-s-5 cl3 hov-cl10 trans-03">
+                    {{news?.ContentDetail?.Title}}
+                </a>
+              </h5>
+              <span class="cl8">
+                <span class="f1-s-3">
+                  {{news?.NewsDate | date}}
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- - -->
+    <div class="tab-pane fade" id="tab1-2" role="tabpanel">
+      <div class="row">
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="m-b-30">
+            <a [routerLink]="['../NewsDetails/'+featuredNews[0]?.NewsID]" class="wrap-pic-w hov1 trans-03">
+              <img [src]="featuredNews[0]?.ContentDetail?.Image" alt="IMG">
+            </a>
+            <div class="p-t-20">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../NewsDetails/'+featuredNews[0]?.NewsID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                  {{featuredNews[0]?.ContentDetail?.Title}} 
+                </a>
+              </h5>
+              <span class="cl8">
+                <span class="f1-s-3">
+                  {{featuredNews[0]?.NewsDate | date}}
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="flex-wr-sb-s m-b-30" *ngFor="let news of featuredNews | slice:1">
+            <a [routerLink]="['../NewsDetails/'+news?.NewsID]" class="size-w-1 wrap-pic-w hov1 trans-03">
+              <img [src]="news?.ContentDetail?.Image" alt="IMG">
+            </a>
+            <div class="size-w-2">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../NewsDetails/'+news?.NewsID]" class="f1-s-5 cl3 hov-cl10 trans-03">
+                    {{news?.ContentDetail?.Title}}
+                </a>
+              </h5>
+              <span class="cl8">
+                <span class="f1-s-3">
+                  {{news?.NewsDate | date}}
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- - -->
+    <div class="tab-pane fade" id="tab1-3" role="tabpanel">
+      <div class="row">
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="m-b-30">
+            <a [routerLink]="['../NewsDetails/'+trendingNews[0]?.NewsID]" class="wrap-pic-w hov1 trans-03">
+              <img [src]="trendingNews[0]?.ContentDetail?.Image" alt="IMG">
+            </a>
+
+            <div class="p-t-20">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../NewsDetails/'+trendingNews[0]?.NewsID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                  {{trendingNews[0]?.ContentDetail?.Title}} 
+                </a>
+              </h5>
+
+              <span class="cl8">
+                <span class="f1-s-3">
+                  {{trendingNews[0]?.NewsDate | date}}
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+        <!-- Item post -->	
+        <div class="flex-wr-sb-s m-b-30" *ngFor="let news of trendingNews | slice:1">
+          <a [routerLink]="['../NewsDetails/'+news?.NewsID]" class="size-w-1 wrap-pic-w hov1 trans-03">
+            <img [src]="news?.ContentDetail?.Image" alt="IMG">
+          </a>
+          <div class="size-w-2">
+            <h5 class="p-b-5">
+              <a [routerLink]="['../NewsDetails/'+news?.NewsID]" class="f1-s-5 cl3 hov-cl10 trans-03">
+                  {{news?.ContentDetail?.Title}}
+              </a>
+            </h5>
+            <span class="cl8">
+              <span class="f1-s-3">
+                {{news?.NewsDate | date}}
+              </span>
+            </span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

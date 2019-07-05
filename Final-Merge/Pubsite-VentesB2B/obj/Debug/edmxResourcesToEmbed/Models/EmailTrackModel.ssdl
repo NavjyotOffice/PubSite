@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmailTrackModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EmailCampaignTrack">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="80" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="80" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="80" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="150" />
+    <Property Name="City" Type="nvarchar" MaxLength="80" />
+    <Property Name="State" Type="nvarchar" MaxLength="80" />
+    <Property Name="Country" Type="nvarchar" MaxLength="80" />
+    <Property Name="Zip" Type="nvarchar" MaxLength="80" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="80" />
+    <Property Name="Company" Type="nvarchar" MaxLength="80" />
+    <Property Name="AlternatePhone" Type="nchar" MaxLength="10" />
+    <Property Name="CustomQuestion1" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustomQuestion2" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustomQuestion3" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustomQuestion4" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustomQuestion5" Type="nvarchar" MaxLength="150" />
+    <Property Name="OptIn" Type="bit" />
+    <Property Name="IP" Type="nvarchar" MaxLength="20" />
+    <Property Name="Browser" Type="nvarchar" MaxLength="50" />
+    <Property Name="Device" Type="nchar" MaxLength="10" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="CampaignName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Track" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="EmailTrackModelStoreContainer">
+    <EntitySet Name="EmailCampaignTrack" EntityType="Self.EmailCampaignTrack" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

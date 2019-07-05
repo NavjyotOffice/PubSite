@@ -1,0 +1,248 @@
+<div class="tab01 p-b-20">
+  <div class="tab01-head how2 how2-cl3 bocl12 flex-s-c m-r-10 m-r-0-sr991">
+    <!-- Brand tab -->
+    <h3 class="f1-m-2 cl14 tab01-title">
+      Resource
+    </h3>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#tab3-1" role="tab">All</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab3-2" role="tab">Whitepapers</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab3-3" role="tab">Videos</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab3-4" role="tab">Infographics</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab3-5" role="tab">blogs</a>
+      </li>
+
+      <li class="nav-item-more dropdown dis-none">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-ellipsis-h"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+          
+        </ul>
+      </li>
+    </ul>
+
+    <!--  -->
+    <a [routerLink]="['/Resources']" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
+      View all
+      <i class="fs-12 m-l-5 fa fa-caret-right"></i>
+    </a>
+  </div>
+    
+
+  <!-- Tab panes -->
+  <div class="tab-content p-t-35">
+    <!-- - -->
+    <div class="tab-pane fade show active" id="tab3-1" role="tabpanel">
+      <div class="row">
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="m-b-30">
+            <a [routerLink]="['../ResourceDetails/'+allResources[0]?.ResourcesID]" class="wrap-pic-w hov1 trans-03">
+              <img [src]="allResources[0]?.ContentDetail.Image" alt="IMG">
+            </a>
+
+            <div class="p-t-20">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../esourceDetails/'+allResources[0]?.ResourcesID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                    {{allResources[0]?.ContentDetail.Title}}
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="flex-wr-sb-s m-b-30" *ngFor="let resource of allResources | slice:1">
+            <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="size-w-1 wrap-pic-w hov1 trans-03">
+              <img [src]="resource?.ContentDetail?.Image" alt="IMG">
+            </a>
+
+            <div class="size-w-2">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="f1-s-5 cl3 hov-cl10 trans-03">
+                  {{resource?.ContentDetail?.Title}}
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- - -->
+    <div class="tab-pane fade" id="tab3-2" role="tabpanel">
+      <div class="row">
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="m-b-30">
+            <a [routerLink]="['../ResourceDetails/'+whitepaper[0]?.ResourcesID]" class="wrap-pic-w hov1 trans-03">
+              <img [src]="whitepaper[0]?.ContentDetail.Image" alt="IMG">
+            </a>
+
+            <div class="p-t-20">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+whitepaper[0]?.ResourcesID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                    {{whitepaper[0]?.ContentDetail.Title}}
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="flex-wr-sb-s m-b-30" *ngFor="let resource of whitepaper | slice:1">
+            <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="size-w-1 wrap-pic-w hov1 trans-03">
+              <img [src]="resource?.ContentDetail?.Image" alt="IMG">
+            </a>
+
+            <div class="size-w-2">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="f1-s-5 cl3 hov-cl10 trans-03">
+                    {{resource?.ContentDetail?.Title}}
+                </a>
+              </h5>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- - -->
+    <div class="tab-pane fade" id="tab3-3" role="tabpanel">
+      <div class="row">
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="m-b-30">
+            <a [routerLink]="['../ResourceDetails/'+videos[0]?.ResourcesID]" class="wrap-pic-w hov1 trans-03">
+              <img [src]="videos[0]?.ContentDetail.Image" alt="IMG">
+            </a>
+
+            <div class="p-t-20">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+videos[0]?.ResourcesID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                    {{videos[0]?.ContentDetail.Title}} 
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="flex-wr-sb-s m-b-30" *ngFor="let resource of videos | slice:1">
+            <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="size-w-1 wrap-pic-w hov1 trans-03">
+              <img [src]="resource?.ContentDetail?.Image" alt="IMG">
+            </a>
+
+            <div class="size-w-2">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="f1-s-5 cl3 hov-cl10 trans-03">
+                    {{resource?.ContentDetail?.Title}}
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- - -->
+    <div class="tab-pane fade" id="tab3-4" role="tabpanel">
+      <div class="row">
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="m-b-30">
+            <a [routerLink]="['../ResourceDetails/'+Infographics[0]?.ResourcesID]" class="wrap-pic-w hov1 trans-03">
+              <img [src]="Infographics[0]?.ContentDetail.Image" alt="IMG">
+            </a>
+
+            <div class="p-t-20">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+Infographics[0]?.ResourcesID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                    {{Infographics[0]?.ContentDetail.Title}}
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="flex-wr-sb-s m-b-30" *ngFor="let resource of Infographics|slice:1">
+            <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="size-w-1 wrap-pic-w hov1 trans-03">
+              <img [src]="resource?.ContentDetail?.Image" alt="IMG">
+            </a>
+
+            <div class="size-w-2">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="f1-s-5 cl3 hov-cl10 trans-03">
+                    {{resource?.ContentDetail?.Title}}
+                </a>
+              </h5>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- - -->
+    <div class="tab-pane fade" id="tab3-5" role="tabpanel">
+      <div class="row">
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="m-b-30">
+            <a [routerLink]="['../ResourceDetails/'+blogs[0]?.ResourcesID]" class="wrap-pic-w hov1 trans-03">
+              <img [src]="blogs[0]?.ContentDetail?.Image" alt="IMG">
+            </a>
+
+            <div class="p-t-20">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+blogs[0]?.ResourcesID]" class="f1-m-3 cl2 hov-cl10 trans-03">
+                    {{blogs[0]?.ContentDetail.Title}} 
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 p-r-25 p-r-15-sr991">
+          <!-- Item post -->	
+          <div class="flex-wr-sb-s m-b-30" *ngFor="let resource of blogs|slice:1">
+            <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="size-w-1 wrap-pic-w hov1 trans-03">
+              <img [src]="resource?.ContentDetail?.Image" alt="IMG">
+            </a>
+
+            <div class="size-w-2">
+              <h5 class="p-b-5">
+                <a [routerLink]="['../ResourceDetails/'+resource?.ResourcesID]" class="f1-s-5 cl3 hov-cl10 trans-03">
+                    {{resource?.ContentDetail?.Title}}
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

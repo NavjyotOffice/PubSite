@@ -1,0 +1,62 @@
+	<!-- Breadcrumb -->
+	<div class="container">
+    <div class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+      <div class="f2-s-1 p-r-30 m-tb-6">
+        <a [routerLink]="['/']" class="breadcrumb-item f1-s-3 cl9">
+          Home 
+        </a>
+        <a [routerLink]="['/Events']" class="breadcrumb-item f1-s-3 cl9">
+          Event 
+        </a>
+        <label class="breadcrumb-item f1-s-3 cl9">
+          {{event?.ContentDetail?.Title}}
+        </label>
+      </div>
+    </div>
+  </div>
+<!-- Content -->
+<section class="bg0 p-b-10 p-t-10">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8 p-b-30">
+        <div class="p-r-10 p-r-0-sr991">
+          <!-- Blog Detail -->
+          <div class="p-b-10">
+            <a target="_blank" href="{{event?.ContentDetail?.URL}}">
+              <h3 class="f1-l-3 cl2 p-b-16 p-t-33 respon2">
+                {{event?.ContentDetail?.Title }}
+              </h3>
+            </a>
+            <div class="flex-wr-s-s p-b-40">
+              <span class="f1-s-3 cl8 m-r-15">
+                <span>
+                  {{ event?.StartDate | date }} - {{event?.EndDate | date}}
+                  <span *ngIf="event?.Address?.City && event?.EventType=='Conference'"> | {{ event?.Address?.City }}, {{ event?.Address?.State }} - {{ event?.Address?.Country }}</span>
+                </span>
+              </span>
+            </div>
+            <a target="_blank" href="{{event?.ContentDetail?.URL}}">
+              <div class="wrap-pic-max-w p-b-30">
+                <img [src]="event?.ContentDetail?.Image" alt="IMG">
+              </div>
+            </a>
+            <p class="f1-s-11 cl6 p-b-25">
+              {{ event?.ContentDetail?.Description }}
+              <a target="_blank" href="{{event?.ContentDetail?.URL}}">
+                Read More
+              </a>
+            </p>
+            <!-- Share -->
+            <app-social-media-share></app-social-media-share>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="col-md-10 col-lg-4 p-b-30">
+        <div class="p-l-10 p-rl-0-sr991 p-t-70">
+          <app-most-popular></app-most-popular>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

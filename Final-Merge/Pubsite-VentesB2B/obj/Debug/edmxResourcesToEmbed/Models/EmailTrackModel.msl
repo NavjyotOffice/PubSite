@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmailTrackModelStoreContainer" CdmEntityContainer="EmailTrackEntities">
+    <EntitySetMapping Name="EmailCampaignTracks">
+      <EntityTypeMapping TypeName="EmailTrackModel.EmailCampaignTrack">
+        <MappingFragment StoreEntitySet="EmailCampaignTrack">
+          <ScalarProperty Name="Track" ColumnName="Track" />
+          <ScalarProperty Name="CampaignName" ColumnName="CampaignName" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="AlternatePhone" ColumnName="AlternatePhone" />
+          <ScalarProperty Name="CustomQuestion1" ColumnName="CustomQuestion1" />
+          <ScalarProperty Name="CustomQuestion2" ColumnName="CustomQuestion2" />
+          <ScalarProperty Name="CustomQuestion3" ColumnName="CustomQuestion3" />
+          <ScalarProperty Name="CustomQuestion4" ColumnName="CustomQuestion4" />
+          <ScalarProperty Name="CustomQuestion5" ColumnName="CustomQuestion5" />
+          <ScalarProperty Name="OptIn" ColumnName="OptIn" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Browser" ColumnName="Browser" />
+          <ScalarProperty Name="Device" ColumnName="Device" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

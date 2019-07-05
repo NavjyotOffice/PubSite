@@ -1,0 +1,115 @@
+<!-- Feature post -->
+<section class="bg0">
+    <div class="container">
+      <div class="row m-rl--1">
+        <div class="col-md-6 p-rl-1 p-b-2">
+          <div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url(/dist/Infotech/assets/images/News.jpg);">
+            <a [routerLink]="['/News']" class="dis-block how1-child1 trans-03"></a>
+            <div class="flex-col-e-s s-full p-rl-20 p-tb-20">
+              <a [routerLink]="['/News']" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+                News
+              </a>
+              <h3 class="how1-child2 m-t-14 m-b-10">
+                <a [routerLink]="['/News']" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
+                  All the Trendy, Featured News about Information Technology field.
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 p-rl-1">
+          <div class="row m-rl--1">
+            <div class="col-12 p-rl-1 p-b-2">
+              <div class="bg-img1 size-a-4 how1 pos-relative" style="background-image: url(/dist/Infotech/assets/images/Events.jpg);">
+                <a [routerLink]="['/Events']" class="dis-block how1-child1 trans-03"></a>
+  
+                <div class="flex-col-e-s s-full p-rl-20 p-tb-24">
+                  <a [routerLink]="['/Events']" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+                    Events
+                  </a>
+  
+                  <h3 class="how1-child2 m-t-14">
+                    <a [routerLink]="['/Events']" class="how-txt1 size-a-7 f1-l-2 cl0 hov-cl10 trans-03">
+                      A lot is happening in the Marketing world, stay connected! Live / On Demand Webinars, upcoming Conferences
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-sm-6 p-rl-1 p-b-2">
+              <div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(/dist/Infotech/assets/images/Resource.jpg);">
+                <a [routerLink]="['/Resources']" class="dis-block how1-child1 trans-03"></a>
+  
+                <div class="flex-col-e-s s-full p-rl-20 p-tb-20">
+                  <a [routerLink]="['/Resources']" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+                    Resources
+                  </a>
+  
+                  <h3 class="how1-child2 m-t-14">
+                    <a [routerLink]="['/Resources']" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+                      Marketing Visionaries: Whitepapers, Blogs/Articles, Infographics, Videos
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-sm-6 p-rl-1 p-b-2">
+              <div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(/dist/Infotech/assets/images/Companies.jpg);">
+                <a [routerLink]="['/Companies']" class="dis-block how1-child1 trans-03"></a>
+  
+                <div class="flex-col-e-s s-full p-rl-20 p-tb-20">
+                  <a [routerLink]="['/Companies']" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+                    Companies
+                  </a>
+  
+                  <h3 class="how1-child2 m-t-14">
+                    <a [routerLink]="['/Companies']" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+                      Do you know all the companies in IT? Know more about emerging name in IT.
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Post -->
+  <section class="bg0 p-t-70">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+          <div class="p-b-20">
+            <!--News-->
+            <app-home-news></app-home-news>
+  
+            <!-- Events -->
+            <app-home-events></app-home-events>
+  
+            <!--Resource-->
+            <app-home-resources></app-home-resources>
+  
+          </div>
+        </div>
+  
+        <div class="col-md-10 col-lg-4">
+          <div class="p-l-10 p-rl-0-sr991 p-b-20">
+
+            <!--News-->
+            <app-most-popular></app-most-popular>
+            
+            <div class="flex-c-s p-t-8">
+              <a target="_blank" href="http://ventesb2b.com/">
+                <img class="max-w-full" [src]="['/dist/Infotech/assets/images/300x600.png']" alt="IMG">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

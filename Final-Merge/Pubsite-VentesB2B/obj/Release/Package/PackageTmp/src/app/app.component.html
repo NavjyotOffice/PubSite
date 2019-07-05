@@ -1,0 +1,541 @@
+<style>
+  .bg2 {
+    background-color: #22222236 !important;
+  }
+  .bg11 {
+    background-color: #15151591 !important;
+}
+</style>
+
+<!-- Header -->
+<header>
+  <!-- Header desktop -->
+  <div class="container-menu-desktop">
+    <!-- Header Mobile -->
+    <div class="wrap-header-mobile">
+      <!-- Logo moblie -->
+      <div class="logo-mobile">
+        <a [routerLink]="['/']"><img [src]="['/dist/Infotech/assets/images/icons/logo-01.png']" alt="IMG-LOGO"></a>
+      </div>
+
+      <!-- Button show menu -->
+      <div class="btn-show-menu-mobile hamburger hamburger--squeeze m-r--8">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="menu-mobile">
+      <ul class="main-menu-m">
+        <li>
+          <a [routerLink]="['/']">Home</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/News']">News</a>
+          <ul class="sub-menu-m">
+            <li><a [routerLink]="['/News']">All</a></li>
+            <li><a [routerLink]="['/News']" [queryParams]="{Type: 'Featured'}">Featured</a></li>
+            <li><a [routerLink]="['/News']" [queryParams]="{Type: 'Trending'}">Trending</a></li>
+          </ul>
+          <span class="arrow-main-menu-m">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+        </li>
+         
+        <li>
+          <a [routerLink]="['/Events']">Events</a>
+          <ul class="sub-menu-m">
+            <li><a [routerLink]="['/Events']">All</a></li>
+            <li><a [routerLink]="['/Events']" [queryParams]="{Type: 'Conference'}">Conference</a></li>
+            <li><a [routerLink]="['/Events']" [queryParams]="{Type: 'OnDemand'}">OnDemand</a></li>
+            <li><a [routerLink]="['/Events']" [queryParams]="{Type: 'Live'}">Live</a></li>
+          </ul>
+          <span class="arrow-main-menu-m">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+        </li>
+
+        <li>
+          <a [routerLink]="['/Resources']">Resources</a>
+          <ul class="sub-menu-m">
+            <li><a [routerLink]="['/Resources']">All</a></li>
+            <li><a [routerLink]="['/Resources']" [queryParams]="{Type: 'Whitepaper'}">Whitepaper</a></li>
+            <li><a [routerLink]="['/Resources']" [queryParams]="{Type: 'Video'}">Video</a></li>
+            <li><a [routerLink]="['/Resources']" [queryParams]="{Type: 'Infographics'}">Infographics</a></li>
+            <li><a [routerLink]="['/Resources']" [queryParams]="{Type: 'blog'}">blog</a></li>
+          </ul>
+          <span class="arrow-main-menu-m">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+        </li>
+
+        <li>
+          <a [routerLink]="['/Companies']">Companies</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!--  -->
+    <div class="wrap-logo container">
+      <!-- Logo desktop -->
+      <div class="logo">
+        <a [routerLink]="['/']"><img style="width: 75%;" [src]="['/dist/Infotech/assets/images/icons/logo-01.png']" alt="LOGO"></a>
+      </div>
+      <!-- Banner -->
+      <div class="banner-header">
+        <a target="_blank" href="http://ventesb2b.com/"><img [src]="['/dist/Infotech/assets/images/728x90.png']" alt="IMG"></a>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="wrap-main-nav">
+      <div class="main-nav">
+        <!-- Menu desktop -->
+        <nav class="menu-desktop">
+          <a class="logo-stick" [routerLink]="['/']">
+            <img [src]="['/dist/Infotech/assets/images/icons/logo-01.png']" alt="LOGO">
+          </a>
+
+          <ul class="main-menu">
+            <li class="main-menu-active noDropDownContent">
+              <a [routerLink]="['/']">Home</a>
+            </li>
+
+            <li class="mega-menu-item">
+              <a [routerLink]="['/News']">News</a>
+
+              <div class="sub-mega-menu">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a id="AllNews" (click)="menuListClick('News', '')" class="nav-link active" data-toggle="pill" href="#news-0" role="tab">All</a>
+                  <a id="FeaturedNews" (click)="menuListClick('News', 'Featured')" class="nav-link" data-toggle="pill" href="#news-1" role="tab">Featured</a>
+                  <a id="TrendingNews" (click)="menuListClick('News', 'Trending')" class="nav-link" data-toggle="pill" href="#news-2" role="tab">Trending</a>
+                </div>
+
+                <div class="tab-content">
+                  <div class="tab-pane show active" id="news-0" role="tabpanel">
+                    <div class="row">
+                      <div class="col-3" *ngFor="let news of news">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('NewsDetails', news.NewsID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="news?.ContentDetail.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('NewsDetails', news.NewsID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{news?.ContentDetail.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="news-1" role="tabpanel">
+                    <div class="row">
+
+                      <div class="col-3" *ngFor="let news of featuredNews">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('NewsDetails', news.NewsID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="news?.ContentDetail.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('NewsDetails', news.NewsID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{news?.ContentDetail.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="news-2" role="tabpanel">
+                    <div class="row">
+
+                      <div class="col-3" *ngFor="let news of trendingNews">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('NewsDetails', news.NewsID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="news?.ContentDetail.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('NewsDetails', news.NewsID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{news?.ContentDetail?.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li class="mega-menu-item">
+              <a [routerLink]="['/Events']">Events</a>
+
+              <div class="sub-mega-menu">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a id="AllEvents" (click)="menuListClick('Events', '')" class="nav-link active" data-toggle="pill" href="#enter-1" role="tab">All</a>
+                  <a id="ConferenceEvent" (click)="menuListClick('Events', 'Conference')" class="nav-link" data-toggle="pill" href="#enter-2" role="tab">Conference</a>
+                  <a id="OnDemandWebinarEvent" (click)="menuListClick('Events', 'OnDemand')" class="nav-link" data-toggle="pill" href="#enter-3" role="tab">On-Demand Webinar</a>
+                  <a id="LiveWebinarEvent" (click)="menuListClick('Events', 'Live')" class="nav-link" data-toggle="pill" href="#enter-4" role="tab">Live Webinar</a>
+                </div>
+
+                <div class="tab-content">
+                  <div class="tab-pane show active" id="enter-1" role="tabpanel">
+                    <div class="row">
+                      <div class="col-3" *ngFor="let event of allEvents">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('EventDetails', event.EventID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="event?.ContentDetail?.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('EventDetails', event.EventID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{event?.ContentDetail?.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="enter-2" role="tabpanel">
+                    <div class="row">
+                      <div class="col-3" *ngFor="let event of conferenceEvents">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('EventDetails', event.EventID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="event?.ContentDetail?.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('EventDetails', event.EventID)"  class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{event?.ContentDetail?.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="enter-3" role="tabpanel">
+                    <div class="row" *ngFor="let event of onDemandEvents">
+                      <div class="col-3">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('EventDetails', event.EventID)"  class="wrap-pic-w hov1 trans-03">
+                            <img [src]="event?.ContentDetail?.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('EventDetails', event.EventID)"  class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{event?.ContentDetail?.Title}}
+                              </a>
+                            </h5>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="enter-4" role="tabpanel">
+                    <div class="row">
+                      <div class="col-3" *ngFor="let event of liveEvents">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('EventDetails', event.EventID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="event?.ContentDetail?.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('EventDetails', event.EventID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{event?.ContentDetail?.Title}}
+                              </a>
+                            </h5>
+
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="mega-menu-item">
+              <a [routerLink]="['/Resources']">Resources</a>
+
+              <div class="sub-mega-menu">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a id="AllResources" (click)="menuListClick('Resources', '')" class="nav-link active" data-toggle="pill" href="#business-1" role="tab">All</a>
+                  <a id="WhitepaperResource" (click)="menuListClick('Resources', 'Whitepaper')" class="nav-link" data-toggle="pill" href="#business-2" role="tab">Whitepaper</a>
+                  <a id="VideoResource" (click)="menuListClick('Resources', 'Video')" class="nav-link" data-toggle="pill" href="#business-3" role="tab">Video</a>
+                  <a id="InfographicsResource" (click)="menuListClick('Resources', 'Infographics')" class="nav-link" data-toggle="pill" href="#business-4" role="tab">Infographics</a>
+                  <a id="BlogResource" (click)="menuListClick('Resources', 'Blog')" class="nav-link" data-toggle="pill" href="#business-5" role="tab">Blog</a>
+                </div>
+
+                <div class="tab-content">
+                  <div class="tab-pane show active" id="business-1" role="tabpanel">
+                    <div class="row">
+
+                      <div class="col-3" *ngFor="let resource of allResources">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="resource?.ContentDetail.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{resource?.ContentDetail.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="business-2" role="tabpanel">
+                    <div class="row">
+                      <div class="col-3" *ngFor="let resource of whitepaper">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="resource?.ContentDetail.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{resource?.ContentDetail.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="business-3" role="tabpanel">
+                    <div class="row">
+                      <div class="col-3" *ngFor="let resource of videos">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="resource?.ContentDetail.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{resource?.ContentDetail.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="business-4" role="tabpanel">
+                    <div class="row">
+                      <div class="col-3" *ngFor="let resource of Infographics">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="resource?.ContentDetail.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{resource?.ContentDetail.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="business-5" role="tabpanel">
+                    <div class="row">
+                      <div class="col-3" *ngFor="let resource of blogs">
+                        <!-- Item post -->
+                        <div>
+                          <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="wrap-pic-w hov1 trans-03">
+                            <img [src]="resource?.ContentDetail.Image" alt="IMG">
+                          </a>
+
+                          <div class="p-t-10">
+                            <h5 class="p-b-5">
+                              <a (click)="detailsRoute('ResourceDetails', resource?.ResourcesID)" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                {{resource?.ContentDetail?.Title}}
+                              </a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="mega-menu-item noDropDownContent">
+              <a [routerLink]="['/Companies']">Companies</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<router-outlet></router-outlet>
+<!-- Footer -->
+<footer>
+  <div class="bg2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-sm-6 p-b-20">
+          <div class="size-h-3 flex-s-c">
+            <a [routerLink]="['/']">
+              <img class="max-s-full" style="width: 25%;" [src]="['/dist/Infotech/assets/images/icons/logo-02.png']" alt="LOGO">
+            </a>
+          </div>
+
+          <div>
+            <p class="f1-s-1 cl11 p-b-16">
+              Infotech.vision includes Resource, News, and Events from around the globe. Its articles explore more than just Marketing news, they explore how Marketing technology impacts every part of our lives.
+            </p>
+            <p class="f1-s-1 cl11 p-b-16">
+              The publications on this list represent some of the top picks for the Marketing industry. The right publications can help you stay current and offer opportunities for Marketing technology with peers.
+            </p>
+            <p class="f1-s-1 cl11 p-b-16">
+              Want to promote your Content? Or any feedback & suggestions <br/>please contact us on Info@infotech.vision  / +1 516 508 8368
+            </p>
+            <p class="f1-s-1 cl11 p-b-16">
+              <div class="row">
+                <div class="input-group col-sm-12 col-md-6">
+                  <input [(ngModel)]="contact.Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #email="ngModel" class="form-control" name="email" id="email" placeholder="Enter Email" required email />
+                  <span class="input-group-btn">
+                    <button class="btn btnsubscribe" type="submit" [disabled]="!email.valid" (click)="subscribeClick(contact)">Subscribe</button>
+                  </span>
+                  
+                </div>
+                <div class="col-sm-12 col-md-6 p-t-5">
+                  <a target="_blank" href="https://www.facebook.com/InfotechVision-369880253638338/" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                    <span class="fab fa-facebook-f"></span>
+                  </a>
+
+                  <a target="_blank" href="https://twitter.com/InfotechVision1" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                    <span class="fab fa-twitter"></span>
+                  </a>
+
+                  <a target="_blank" href="https://www.linkedin.com/company/advertisement-vision/about/?viewAsMember=true" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                    <span class="fab fa-linkedin-in"></span>
+                  </a>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <span *ngIf="subscribeMsg" style="color: #14d859fc; font-weight: bold; font-style: italic;">
+                    Thank you for getting in touch!
+                  </span>
+                </div>
+              </div>
+
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-lg-3 p-b-20">
+          <div class="size-h-3 flex-s-c">
+            <h5 class="f1-m-7 cl0">
+              Category
+            </h5>
+          </div>
+
+          <ul class="m-t--12">
+            <!--<li class="how-bor1 p-rl-5 p-tb-10">
+              <a target="_blank" href="http://infotech.vision/" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                Information Technology Industry
+              </a>
+            </li>-->
+
+            <li class="how-bor1 p-rl-5 p-tb-10">
+              <a target="_blank" href="http://manufacturing.vision" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                Manufacturing Industry
+              </a>
+            </li>
+
+            <li class="how-bor1 p-rl-5 p-tb-10">
+              <a target="_blank" href="http://advertisement.vision/" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                Advertisement Industry
+              </a>
+            </li>
+
+            <li class="how-bor1 p-rl-5 p-tb-10">
+              <a target="_blank" href="http://Healthcareservices.vision" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                Healthcare Industry
+              </a>
+            </li>
+
+            <li class="how-bor1 p-rl-5 p-tb-10">
+              <a target="_blank" href="http://Indservices.vision" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                Services Industry
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg11">
+    <div class="container size-h-7 flex-c-c p-tb-15">
+      <span class="f1-s-1 cl0 txt-center" style="font-size: 8px;">
+        Copyright © 2018
+
+        <a href="#" class="f1-s-1 cl10 hov-link1" style="font-size: 8px;">Colorlib.</a>
+
+        All rights reserved.
+      </span>
+    </div>
+  </div>
+</footer>

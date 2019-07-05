@@ -1,0 +1,33 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div class="intro-header">
+  <div align="center">
+    <style>
+      .btnsubscribe {
+        color: white;
+        background-color: #1b7d56;
+        font-weight: bold;
+      }
+    </style>
+    <div class="tab-content custom-tab-content" align="center">
+      <div class="subscribe-panel">
+        <h1>Newsletter!!!</h1>
+        <p>Subscribe to our weekly Newsletter and stay tuned.</p>
+        <form method="post">
+          <div class="col-md-12 col-sm-12 col-xs-12"></div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+              <input matInput [(ngModel)]="data.Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #email="ngModel" class="form-control input-lg" cdkFocusInitial name="email" id="email" placeholder="Enter Email" required email />
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12"></div>
+          <br /><br /><br />
+          <button class="btn btnsubscribe" type="submit" [disabled]="!email.valid" mat-button (click)="subscribeClick(data)">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+
+@{
+  Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Infotech : Pubsite</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/dist/Infotech/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/dist/Infotech/assets/fontawesome-5.0.8/css/fontawesome-all.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/dist/Infotech/assets/iconic/css/material-design-iconic-font.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/dist/Infotech/assets/vendor/animate/animate.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/dist/Infotech/assets/vendor/css-hamburgers/hamburgers.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/dist/Infotech/assets/vendor/animsition/css/animsition.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/dist/Infotech/assets/css/util.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/dist/Infotech/assets/css/main.css">
+  <!--===============================================================================================-->
+  <script src="~/dist/Infotech/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="~/dist/Infotech/assets/vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="~/dist/Infotech/assets/vendor/bootstrap/js/popper.js"></script>
+  <script src="~/dist/Infotech/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <style>
+
+    .noDropDownContent > a::after {
+      content: none !important;
+    }
+
+    .btnsubscribe {
+      color: white;
+      background-color: #1b7d56;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #343a40e0;
+    }
+  </style>
+</head>
+<body class="animsition">
+  @RenderBody()
+  <app-root></app-root>
+  <!-- Back to top -->
+  <div class="btn-back-to-top" id="myBtn">
+    <span class="symbol-btn-back-to-top">
+      <span class="fas fa-angle-up"></span>
+    </span>
+  </div>
+  <!-- Modal Video 01-->
+  <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document" data-dismiss="modal">
+      <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+
+      <div class="wrap-video-mo-01">
+        <div class="video-mo-01">
+          <iframe src="https://www.youtube.com/embed/wJnBTPUQS5A?rel=0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  @*<script src="~/dist/Infotech/runtime-es5.js"></script>
+  <script src="~/dist/Infotech/polyfills-es5.js"></script>
+  <script src="~/dist/Infotech/styles-es5.js"></script>
+  <script src="~/dist/Infotech/vendor-es5.js"></script>
+  <script src="~/dist/Infotech/main-es5.js"></script>*@
+  @Scripts.Render("~/bundles/angularScripts")
+  <script src="~/dist/Infotech/assets/js/main.js"></script>
+</body>
+</html>

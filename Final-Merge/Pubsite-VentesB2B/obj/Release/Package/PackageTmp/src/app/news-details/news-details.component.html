@@ -1,0 +1,65 @@
+	<!-- Breadcrumb -->
+	<div class="container">
+  <div class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+    <div class="f2-s-1 p-r-30 m-tb-6">
+      <a [routerLink]="['/']" class="breadcrumb-item f1-s-3 cl9">
+        Home 
+      </a>
+      <a [routerLink]="['/News']" class="breadcrumb-item f1-s-3 cl9">
+        News 
+      </a>
+      <label class="breadcrumb-item f1-s-3 cl9">
+        {{news?.ContentDetail?.Title}}
+      </label>
+    </div>
+  </div>
+</div>
+<!-- Content -->
+<section class="bg0 p-b-10 p-t-10">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8 p-b-30">
+        <div class="p-r-10 p-r-0-sr991">
+          <!-- Blog Detail -->
+          <div class="p-b-10">
+            <a target="_blank" href="{{news?.ContentDetail?.URL}}">
+              <h3 class="f1-l-3 cl2 p-b-16 p-t-33 respon2">
+                {{news?.ContentDetail?.Title }}
+              </h3>
+            </a>
+            <div class="flex-wr-s-s p-b-40">
+              <span class="f1-s-3 cl8 m-r-15">
+                <a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
+                  by {{ news?.ContentDetail?.Author | titlecase }}
+                </a>
+                <span class="m-rl-3">-</span>
+                <span>
+                  {{ news?.NewsDate | date }}
+                </span>
+              </span>
+            </div>
+            <a target="_blank" href="{{news?.ContentDetail?.URL}}">
+              <div class="wrap-pic-max-w p-b-30">
+                <img [src]="news?.ContentDetail?.Image" alt="IMG">
+              </div>
+            </a>
+            <p class="f1-s-11 cl6 p-b-25">
+              {{ news?.ContentDetail?.Description }}
+              <a target="_blank" href="{{news?.ContentDetail?.URL}}">
+                Read More
+              </a>
+            </p>
+            <!-- Share -->
+            <app-social-media-share></app-social-media-share>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="col-md-10 col-lg-4 p-b-30">
+        <div class="p-l-10 p-rl-0-sr991 p-t-70">						
+          <app-most-popular></app-most-popular>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
