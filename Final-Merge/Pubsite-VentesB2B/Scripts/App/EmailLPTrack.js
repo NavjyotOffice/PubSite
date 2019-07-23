@@ -1,4 +1,4 @@
-var trackEnum = { click: "click", open: "open", pixel: "pixel" };
+var trackEnum = { download: "download", click: "click", pixel: "open/pixel" };
 
 function colectFormData() {
     return {
@@ -27,7 +27,7 @@ function colectFormData() {
 }
 
 function PostDataFormSubmit(data, thankYouURL, track) {
-    data.Track = track.toLowerCase();
+    data.Track = track;
     $.ajax({
         type: 'Post',
         url: '../api/LandingPageTrack',
@@ -153,10 +153,11 @@ function hideQueryStringFields() {
             $("#divEmail").hide();
             $('#Email').removeAttr('required');
             if (queryStringValues.Track) {
-                PostDataFormSubmit(colectFormData(), "", trackEnum.pixel);
+              PostDataFormSubmit(colectFormData(), "", trackEnum.pixel);
+              setTimeout("location.href = '../Images/pixel.png';", 1000);
             }
             else {
-                PostDataFormSubmit(colectFormData(), "", trackEnum.open);
+              PostDataFormSubmit(colectFormData(), "", trackEnum.click);
             }
         }
     }

@@ -79,7 +79,7 @@
       $('#myform').submit(function (e) {
         e.preventDefault();
         var data = colectFormData();
-        PostDataFormSubmit(data, "MicrosoftAzure-Azure-Strategy-Canada-Thank-You.html", trackEnum.click);
+        PostDataFormSubmit(data, "MicrosoftAzure-Azure-Strategy-Canada-Thank-You.html", trackEnum.download);
       });
 
     });
@@ -171,60 +171,95 @@
                                 <form id="myform">
                                     <div class="row row-size2 column">
                                         <fieldset>
-                                            <div class="hidden-inputs ">
-                                                <div class="form-row" id="divFirstName">
-                                                    <label for="FirstName">First name</label>
-                                                    <span class="form-element" aria-live="polite" aria-atomic="true">
-                                                        <input aria-required="true" data-val-required="Provide a valid first name." id="FirstName" name="FirstName" type="text" value="" required="required"> 
-                                                        <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
-                                                    </span>
-                                                </div>
-                                                <div class="form-row" id="divLastName">
-                                                    <label for="LastName">Surname</label>
-                                                    <span class="form-element" aria-live="polite" aria-atomic="true">
-                                                        <input aria-required="true" data-val-required="Provide a valid surname." id="LastName" name="LastName" type="text" value="" required="required"> 
-                                                        <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
-                                                    </span>
-                                                </div>
-                                                <div class="form-row" id="divCompany">
-                                                    <label for="Company">Company name</label>
-                                                    <span class="form-element" aria-live="polite" aria-atomic="true">
-                                                        <input aria-required="true" data-bi-field1="Company" data-val-required="Provide a valid company name." id="Company" name="Company" type="text" value=""  required="required"> 
-                                                        <span class="field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true"></span>
-                                                    </span>
-                                                </div>
-                                                <div class="form-row" id="divJobTitle">
-                                                    <label for="Title">Job title</label><span class="form-element" aria-live="polite" aria-atomic="true">
-                                                        <select aria-required="true" data-bi-field2="Job Title" data-val-required="Provide a valid job title." id="JobTitle" name="JobTitle" required="required">
-                                                            <option value="" disabled selected hidden></option>
-                                                            <option value="AnalystPress">Analyst/Press</option>
-                                                            <option value="DeveloperEngineer">Developer/Engineer</option>
-                                                            <option value="Executive">Executive</option>
-                                                            <option value="ItTechnicalManager">IT or Technical Manager</option>
-                                                            <option value="MarketingSales">Marketing/Sales</option>
-                                                            <option value="Other">Other</option>
-                                                            <option value="ResearcherAcademic">Researcher/Academic</option>
-                                                            <option value="SystemAdministrator">System Administrator</option>
-                                                            <option value="SystemsArchitect">Systems/Solution Architect</option>
-                                                        </select> <span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
-                                                    </span>
-                                                </div>
-                                                <div class="form-row " id="divPhone">
-                                                    <label for="Phone">Phone</label>
-                                                    <span class="form-element" aria-live="polite" aria-atomic="true">
-                                                        <input aria-required="true" data-val-required="Provide a valid phone number." id="Phone" name="Phone" type="text" value="" required="required">
-                                                        <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
-                                                    </span>
-                                                </div>
-                                                <div class="form-row" id="divEmail">
-                                                    <label for="Email">Email Address</label>
-                                                        <span class="form-element" aria-live="polite" aria-atomic="true">
-                                                            <input aria-required="true" data-val-email="Provide a valid email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" data-val-required="Provide a valid email address." id="Email" name="Email" type="text" value="" required="required"> 
-                                                            <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
-                                                        </span>
-                                                </div>
+                                          <div class="hidden-inputs ">
+                                            <div class="form-row" id="divFirstName">
+                                              <label for="FirstName">First name</label>
+                                              <span class="form-element" aria-live="polite" aria-atomic="true">
+                                                <input aria-required="true" data-val-required="Provide a valid first name." id="FirstName" name="FirstName" type="text" value="" required="required">
+                                                <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+                                              </span>
                                             </div>
-                                            <div class="form-row" id="divCountry">
+                                            <div class="form-row" id="divLastName">
+                                              <label for="LastName">Last Name</label>
+                                              <span class="form-element" aria-live="polite" aria-atomic="true">
+                                                <input aria-required="true" data-val-required="Provide a valid surname." id="LastName" name="LastName" type="text" value="" required="required">
+                                                <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                                              </span>
+                                            </div>
+                                            <div class="form-row" id="divEmail">
+                                              <label for="Email">Email Address</label>
+                                              <span class="form-element" aria-live="polite" aria-atomic="true">
+                                                <input aria-required="true" data-val-email="Provide a valid email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" data-val-required="Provide a valid email address." id="Email" name="Email" type="text" value="" required="required">
+                                                <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                                              </span>
+                                            </div>
+                                            <div class="form-row" id="divCompany">
+                                              <label for="Company">Company Name</label>
+                                              <span class="form-element" aria-live="polite" aria-atomic="true">
+                                                <input aria-required="true" data-bi-field1="Company" data-val-required="Provide a valid company name." id="Company" name="Company" type="text" value="" required="required">
+                                                <span class="field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true"></span>
+                                              </span>
+                                            </div>
+                                            <div class="form-row" id="divEmployeeSize">
+                                              <label for="Title">Company Size</label><span class="form-element" aria-live="polite" aria-atomic="true">
+                                              <select aria-required="true" data-bi-field2="Job Title" data-val-required="Provide a valid job title." id="EmployeeSize" name="EmployeeSize" required="required">
+                                                <option value="" disabled selected hidden></option>
+                                                <!--<option value="1">1</option>
+                                                <option value="2-4">2-4</option>
+                                                <option value="5-9">5-9</option>
+                                                <option value="10-24">10-24</option>
+                                                <option value="25-49">25-49</option>
+                                                <option value="50-249">50-249</option>
+                                                <option value="250-999">250-999</option>
+                                                <option value="1000+">1000+</option>
+                                                <option value="250-999">250-999</option>-->
+                                                <option value="250-499">250-499</option>
+                                              </select> <span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                                              </span>
+                                            </div>
+                                            <div class="form-row" id="divJobTitle">
+                                              <label for="Title">Job Role</label><span class="form-element" aria-live="polite" aria-atomic="true">
+                                                <select aria-required="true" data-bi-field2="Job Title" data-val-required="Provide a valid job title." id="JobTitle" name="JobTitle" required="required">
+                                                  <option value="" disabled selected hidden></option>
+                                                  <option value="Owner">Owner</option>
+                                                  <option value="Director">Director</option>
+                                                  <option value="Manager">Manager</option>
+                                                  <option value="Individual Contributor/Staff">Individual Contributor/Staff</option>
+                                                  <option value="Developer">Developer</option>
+                                                  <option value="Chief Officer">Chief Officer</option>
+                                                  <option value="Vice President">Vice President</option>
+                                                </select> <span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                                              </span>
+                                            </div>
+                                            <div class="form-row" id="divCustomQuestion1">
+                                              <label for="Title">Job Department</label><span class="form-element" aria-live="polite" aria-atomic="true">
+                                              <select aria-required="true" data-bi-field2="Job Title" data-val-required="Provide a valid job title." id="CustomQuestion1" name="CustomQuestion1" required="required">
+                                                <option value="" disabled selected hidden></option>
+                                                <option value="Human Resources">Human Resources</option>
+                                                <option value="Sales/Business Development">Sales/Business Development</option>
+                                                <option value="Legal/Compliance">Legal/Compliance</option>
+                                                <option value="Finance">Finance</option>
+                                                <option value="Marketing">Marketing</option>
+                                                <option value="Operations">Operations</option>
+                                                <option value="Data/Business Intelligence">Data/Business Intelligence</option>
+                                                <option value="Security">Security</option>
+                                                <option value="Engineering">Engineering</option>
+                                                <option value="Information Technology">Information Technology</option>
+                                                <option value="Customer Service">Customer Service</option>
+                                                <option value="Owner">Owner</option>
+                                              </select> <span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                                              </span>
+                                            </div>
+                                            <div class="form-row " id="divPhone">
+                                              <label for="Phone">Phone</label>
+                                              <span class="form-element" aria-live="polite" aria-atomic="true">
+                                                <input aria-required="true" data-val-required="Provide a valid phone number." id="Phone" name="Phone" type="text" value="" required="required">
+                                                <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+                                              </span>
+                                            </div>
+
+                                          </div>
+                                          <!--<div class="form-row" id="divCountry">
                                                 <label for="Country">Country/region</label><span class="form-element" aria-live="polite" aria-atomic="true">
                                                     <select aria-required="true" data-dropdown-event="global-form-multiple-changed-countrydropdown" data-dropdown-property="CommonCountryDropdownValue" data-event-property="Country Dropdown" data-val-required="Please select a valid country." id="Country" name="Country" required="required">
                                                         <option value="" disabled selected hidden></option>
@@ -481,7 +516,7 @@
                                                         <option value="Zimbabwe">Zimbabwe</option>
                                                     </select> <span class="field-validation-valid" data-valmsg-for="Country" data-valmsg-replace="true"></span>
                                                 </span>
-                                            </div>
+                                            </div>-->
 
                                             <div id="canadian-privacy-disclaimer-container" style="">
                                               I would like to hear from Microsoft and its family of companies via email and phone about Microsoft Azure and other Microsoft products and services. To withdraw consent or manage your contact preferences, visit the <a href="https://go.microsoft.com/fwlink/?LinkId=243189&amp;clcid=0x1009">Promotional Communications Manager</a>. <a href="https://go.microsoft.com/fwlink/?LinkId=521839&amp;clcid=0x1009">Privacy Statement</a>.

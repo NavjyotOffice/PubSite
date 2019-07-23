@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -13,11 +13,11 @@ namespace Pubsite_VentesB2B.Controllers
     {
         private ApplicationDbContext db;
 
-        public HttpResponseMessage Get()
-        {
-            db = new ApplicationDbContext();
-            return Request.CreateResponse(HttpStatusCode.OK, db.EmailCampaignLandingPageTracks);
-        }
+        //public HttpResponseMessage Get()
+        //{
+        //    db = new ApplicationDbContext();
+        //    return Request.CreateResponse(HttpStatusCode.OK, db.EmailCampaignLandingPageTracks);
+        //}
         public HttpResponseMessage Post(EmailCampaignLandingPageTrack emailCampaignTrack)
         {
             try
@@ -48,5 +48,47 @@ namespace Pubsite_VentesB2B.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, Ex);
             }
         }
+
+    public HttpResponseMessage GetPixelTrack(string Email, string CampaignName)
+    {
+      try
+      {
+        if (!string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(CampaignName))
+        {
+          EmailCampaignLandingPageTrack emailCampaignTrack = new EmailCampaignLandingPageTrack();
+          emailCampaignTrack.Email = Email;
+          emailCampaignTrack.CampaignName = CampaignName;
+          emailCampaignTrack.Track = "open/pixel";
+          using (db = new ApplicationDbContext())
+          {
+            emailCampaignTrack.IP = HttpContext.Current.Request.UserHostAddress;
+            emailCampaignTrack.Browser = HttpContext.Current.Request.Browser.Type;
+            emailCampaignTrack.Device = HttpContext.Current.Request.Browser.IsMobileDevice ? HttpContext.Current.Request.Browser.MobileDeviceManufacturer : HttpContext.Current.Request.Browser.Platform;
+            emailCampaignTrack.DateTime = DateTime.Now;
+
+            db.EmailCampaignLandingPageTracks.Add(emailCampaignTrack);
+            db.SaveChanges();
+
+            var ResponseMessage = Request.CreateResponse(HttpStatusCode.Created, emailCampaignTrack);
+            ResponseMessage.Headers.Location = new Uri(Request.RequestUri + emailCampaignTrack.Id.ToString());
+            if (emailCampaignTrack.Track.ToLower().Contains("pixel"))
+            {
+              var response = Request.CreateResponse(HttpStatusCode.Moved);
+              response.Headers.Location = new Uri("../Images/pixel.png", uriKind: UriKind.Relative);
+              return response;
+            }
+            return ResponseMessage;
+          }
+        }
+        else
+        {
+          return Request.CreateResponse(HttpStatusCode.BadGateway);
+        }
+      }
+      catch (Exception Ex)
+      {
+        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, Ex);
+      }
     }
+  }
 }

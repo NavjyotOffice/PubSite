@@ -530,6 +530,8 @@
     <Content Include="MicrosoftOffice\MicrosoftOffice-Breakthrough-Teamwork-Tools-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Transform-Teamwork-With-Cloud-Solutions-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Transform-Teamwork-With-Cloud-Solutions.html" />
+    <Content Include="PostingLink\OptimalFusion\ABM-july-sept-2019.html" />
+    <Content Include="PostingLink\OptimalFusion\AZURE-july-sept-2019.html" />
     <Content Include="Scripts\App\App.js" />
     <Content Include="Scripts\App\EmailLPTrack.js" />
     <Content Include="Scripts\bootstrap.js" />
