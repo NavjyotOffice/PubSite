@@ -486,6 +486,8 @@
     <Content Include="dist\out-tsc\src\polyfills.js" />
     <Content Include="dist\out-tsc\src\test.js" />
     <Content Include="e2e\protractor.conf.js" />
+    <Content Include="Microsoft365\Office-EMS-Windows-Thank-You.html" />
+    <Content Include="Microsoft365\Office-EMS-Windows.html" />
     <Content Include="MicrosoftAzure\microsoft.png" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Azure-Strategy-Canada.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Azure-Strategy-Canada-Thank-You.html" />
@@ -495,6 +497,10 @@
     <Content Include="MicrosoftAzure\MicrosoftAzure-Cloud-Everywhere-Canada-Thank-You.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Cloud-Everywhere-UK.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Cloud-Everywhere-UK-Thank-You.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Cloud-Lessons-Learned-ThankYou-UK - Copy.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Cloud-Lessons-Learned-UK - Copy.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Easier-Path-To-Cloud-For-Legacy-Sql-Server-Brazil.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Easier-Path-To-Cloud-For-Legacy-Sql-Server-Brazil-Thank-You.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Lead-Your-Team-UK-Thank-You.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Lead-Your-Team-UK.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-From-End-of-Support-to-Azure-UK-Thank-You.html" />
@@ -526,8 +532,14 @@
     <Content Include="Images\ventesb2bFull.png" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-From-End-of-Support-to-Azure-UK.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Cloud-Lessons-Learned-UK.html" />
+    <Content Include="MicrosoftDynamics\Amplify-Your-Selling-Microsoft-Dynamics-365-E-Book.html" />
+    <Content Include="MicrosoftDynamics\Amplify-Your-Selling-Microsoft-Dynamics-365-E-Book-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Transform-Your-Field-Service-with-IoT-AI-and-Mixed-Reality-ebook.html" />
+    <Content Include="MicrosoftDynamics\Transform-Your-Field-Service-with-IoT-AI-and-Mixed-Reality-ebook-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Breakthrough-Teamwork-Tools.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Breakthrough-Teamwork-Tools-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Smarter-Sales-Stack.html" />
+    <Content Include="MicrosoftDynamics\Smarter-Sales-Stack-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Transform-Teamwork-With-Cloud-Solutions-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Transform-Teamwork-With-Cloud-Solutions.html" />
     <Content Include="PostingLink\OptimalFusion\ABM-july-sept-2019.html" />
