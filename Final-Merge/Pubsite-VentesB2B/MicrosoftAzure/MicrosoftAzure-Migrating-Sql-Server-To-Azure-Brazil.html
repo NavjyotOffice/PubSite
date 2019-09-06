@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">
+    @media only screen and (min-width: 768px) {
+      .section-resources-theme-default {
+        background-image: url(/cvt-2473f50…/less/images/section/resources-theme-default.jpg);
+      }
+    }
     .logoImg{
       width: 15%;
     }
@@ -13,7 +18,7 @@
     }
 
     .section-resources-theme-default {
-      background-image: url('https://azurecomcdn.azureedge.net/cvt-2473f5032e6468d280c3866c486fb4b7f0f3420115e01433c1d715d5c9d4436a/less/images/section/skyline.jpg') !important;
+      background-image: url('https://azurecomcdn.azureedge.net/cvt-2473f5032e6468d280c3866c486fb4b7f0f3420115e01433c1d715d5c9d4436a/less/images/section/resources-theme-default.jpg') !important;
     }
 
     .section.resource-page {
@@ -42,26 +47,28 @@
       }
     }
   </style>
-  <meta name="description" content="Get insights from companies who migrated to Microsoft Azure to help plan your own Windows Server 2008 migration. Read the Cloud Lessons Learned e-book from Microsoft.">
-  <meta name="keywords" content="Cloud Lessons Learned, Windows Server 2008 migration">
+  <meta name="description" content="Com o fim do suporte ao SQL Server 2008 e 2008 R2 em 2019, você terá uma oportunidade de atualizar para um serviço de banco de dados de nuvem. Siga este guia passo a passo para gerenciar a mudança de maneira eficiente conforme você implementa a sua migração. ">
+  <meta name="keywords" content="Migrando do SQL Server para a Instância Gerenciada do Banco de Dados SQL do Azure: um guia passo a passo">
   <meta name="resource-type" property="resource-type" content="ebookresource">
 
   <!--FB Share MetaTag-->
   <meta name="og:type" property="og:type" content="website">
   <meta name="og:url" property="og:url" content="https://azure.microsoft.com/en-gb/resources/cloud-lessons-learned-4-companies-that-migrated-windows-server-en-gb/">
-  <meta name="og:image" property="og:image" content="http://infotech.vision/Themes/MicrosoftAzure/Azure-Migration-Cloud-lessons-learned-4-companies-that-migrated-Windows-Server.png">
-  <meta name="og:description" property="og:description" content="Get insights from companies who migrated to Microsoft Azure to help plan your own Windows Server 2008 migration. Read the Cloud Lessons Learned e-book from Microsoft.">
-  <meta name="og:title" property="og:title" content="Cloud lessons learned: Companies migrating Windows Server | Microsoft Azure">
+  <meta name="og:image" property="og:image" content="https://azurecomcdn.azureedge.net/cvt-26276bb617ed9c2643b1ca22336a27169bab0da9bf7b0e1ed57350389894d970/mediahandler/files/resourcefiles/migrating-sql-server-to-azure-sql-managed-instance-step-by-step-pt-br/pt-BR_Azure-Migration-Migrating-SQL-Server-to-Azure-SQL-DB.png">
+  <meta name="og:description" property="og:description" content="Com o fim do suporte ao SQL Server 2008 e 2008 R2 em 2019, você terá uma oportunidade de atualizar para um serviço de banco de dados de nuvem. Siga este guia passo a passo para gerenciar a mudança de maneira eficiente conforme você implementa a sua migração. ">
+  <meta name="og:title" property="og:title" content="Migrando do SQL Server para a Instância Gerenciada do Banco de Dados SQL do Azure: um guia passo a passo">
 
 
   <!--TW Share MetaTag-->
   <meta name="twitter:card" property="twitter:card" content="summary">
   <meta name="twitter:url" property="twitter:url" content="https://azure.microsoft.com/en-gb/resources/cloud-lessons-learned-4-companies-that-migrated-windows-server-en-gb/">
-  <meta name="twitter:image" property="twitter:image" content="http://infotech.vision/Themes/MicrosoftAzure/Azure-Migration-Cloud-lessons-learned-4-companies-that-migrated-Windows-Server.png">
-  <meta name="twitter:title" property="twitter:title" content="Cloud lessons learned: Companies migrating Windows Server | Microso...">
-  <meta name="twitter:description" property="twitter:description" content="Get insights from companies who migrated to Microsoft Azure to help plan your own Windows Server 2008 migration. Read the Cloud Lessons Learned e-book from Microsoft.">
+  <meta name="twitter:image" property="twitter:image" content="https://azurecomcdn.azureedge.net/cvt-26276bb617ed9c2643b1ca22336a27169bab0da9bf7b0e1ed57350389894d970/mediahandler/files/resourcefiles/migrating-sql-server-to-azure-sql-managed-instance-step-by-step-pt-br/pt-BR_Azure-Migration-Migrating-SQL-Server-to-Azure-SQL-DB.png">
+  <meta name="twitter:title" property="twitter:title" content="Migrando do SQL Server para a Instância Gerenciada do Banco de Dados SQL do Azure: um guia passo a passo">
+  <meta name="twitter:description" property="twitter:description" content="Com o fim do suporte ao SQL Server 2008 e 2008 R2 em 2019, você terá uma oportunidade de atualizar para um serviço de banco de dados de nuvem. Siga este guia passo a passo para gerenciar a mudança de maneira eficiente conforme você implementa a sua migração. ">
 
-  <title>Cloud lessons learned: Companies migrating Windows Server | Microsoft Azure</title>
+  <title>
+    Migrando do SQL Server para a Instância Gerenciada do Banco de Dados SQL do Azure: um guia passo a passo
+  </title>
   <link rel="stylesheet" href="../Themes/MicrosoftAzure/azuremediaplayer.min.css">
 
 
@@ -77,7 +84,7 @@
       $('#myform').submit(function (e) {
         e.preventDefault();
         var data = colectFormData();
-        PostDataFormSubmit(data, "MicrosoftAzure-Cloud-Lessons-Learned-ThankYou-UK.html", trackEnum.download);
+        PostDataFormSubmit(data, "MicrosoftAzure-Migrating-Sql-Server-To-Azure-Brazil-Thank-You.html", trackEnum.download);
       });
 
     });
@@ -106,7 +113,7 @@
         <div class="section section-palette02 section-resources-theme-default">
 
             <div class="row row-size2 column">
-                <h1>Cloud Lessons Learned: Four Companies That Migrated Windows Server</h1>
+                <h1>Migrando do SQL Server para a Instância Gerenciada do Banco de Dados SQL do Azure: um guia passo a passo</h1>
             </div>
         </div>
         <div class="section resource-page">
@@ -116,9 +123,26 @@
                 </div>
                 <div class="row row-size2">
                     <div class="column medium-7 resource-page-content">
-                        <span style="">Windows Server 2008 and 2008 R2 end of support is coming. But as other companies have already shown, that doesn’t mean you need to give up the security, savings, support, and development experience your workloads require.&nbsp;</span><div style=""><br style=""></div><div style="">Read this e-book to learn why an Azure migration was the right path for Allscripts, GEA Group, Jellyfish Pictures, and MedPoint Digital. You’ll discover the cost, skillset, and compliance lessons they learned along the way, along with how Azure helps you:&nbsp;</div><div style=""><br></div><div style=""><ul style=""><li style="">Migrate easily using familiar Microsoft technologies.</li><li style="">Enable hybrid cloud scenarios with open-source capabilities.</li><li style="">Keep your existing workloads secure.&nbsp;</li><li style="">Get centralized services and support from Microsoft.&nbsp;</li></ul><div style=""><br style=""></div><i style="">“The migration will save us costs, as we can continue using Windows Server licenses in Azure.”&nbsp;</i></div><div style=""><span style="">—</span>Stefan Heimann, Chief Information Officer, GEA Group&nbsp;</div><br>
+                      <span style="">
+                        Com o fim do suporte ao SQL Server 2008 e 2008 R2 em 2019, você terá uma oportunidade de atualizar para um serviço de banco de dados de nuvem. Siga este guia passo a passo para gerenciar a mudança de maneira eficiente conforme você implementa a sua migração.
+                      </span>
+                        <div style="">
+                          <br style="">
+                        </div>
+                        <div style="">
+                          OAvalie, migre e otimize. Migrando do SQL Server para a Instância Gerenciada do Banco de Dados SQL do Azure: um guia passo a passo é um manual completo para executar uma migração, com orientações sobre cada etapa e indicadores principais para ajudar a simplificar o processo e minimizar a interrupção de seu negócio.
+                        </div>
+                        <div style=""><br></div>
+                        <div style="">
+                          Baixe o guia agora mesmo para obter explicações detalhadas de etapas táticas para implementar uma migração de dados rápida, simples e de baixo impacto com a Instância Gerenciada do Banco de Dados SQL do Azure.
+
+                          <div style=""><br style=""></div>
+                          <!--<i style="">“The migration will save us costs, as we can continue using Windows Server licenses in Azure.”&nbsp;</i>-->
+                        </div>
+                        <!--<div style=""><span style="">—</span>Stefan Heimann, Chief Information Officer, GEA Group&nbsp;</div>-->
+                        <br>
                         <div class="row row-size3 column">
-                            <img src="../Themes/MicrosoftAzure/Azure-Migration-Cloud-lessons-learned-4-companies-that-migrated-Windows-Server.png" class="resource-page-image" alt="" role="presentation">
+                            <img src="https://azurecomcdn.azureedge.net/cvt-26276bb617ed9c2643b1ca22336a27169bab0da9bf7b0e1ed57350389894d970/mediahandler/files/resourcefiles/migrating-sql-server-to-azure-sql-managed-instance-step-by-step-pt-br/pt-BR_Azure-Migration-Migrating-SQL-Server-to-Azure-SQL-DB.png" class="resource-page-image" alt="" role="presentation">
                         </div>
                     </div>
                     <div class="column medium-5">
@@ -126,17 +150,19 @@
                             <div class="form-replace">
                                 <div>
                                     <div class="row column" style="text-align:center">
-                                        <h5>Share</h5>
-                                        <a class="social-share social-facebook" href="https://www.facebook.com/share.php?u=http://infotech.vision/MicrosoftAzure/MicrosoftAzure-Cloud-Lessons-Learned-UK.html" target="_blank">
+                                      <h5>Compartilhar</h5>
+                                        <a class="social-share social-facebook" href="https://www.facebook.com/share.php?u=http://infotech.vision/MicrosoftAzure/MicrosoftAzure-Migrating-Sql-Server-To-Azure-Brazil.html" target="_blank">
                                             <img src="../Themes/MicrosoftAzure/facebook.png" alt="Facebook">
                                         </a>
-                                        <a class="social-share social-twitter" href="https://twitter.com/share?url=http://infotech.vision/MicrosoftAzure/MicrosoftAzure-Cloud-Lessons-Learned-UK.html" target="_blank">
+                                        <a class="social-share social-twitter" href="https://twitter.com/share?url=http://infotech.vision/MicrosoftAzure/MicrosoftAzure-Migrating-Sql-Server-To-Azure-Brazil.html" target="_blank">
                                             <img src="../Themes/MicrosoftAzure/twitter.png" alt="Twitter">
                                         </a>
-                                        <a class="social-share social-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://infotech.vision/MicrosoftAzure/MicrosoftAzure-Cloud-Lessons-Learned-UK.html" target="_blank">
+                                        <a class="social-share social-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://infotech.vision/MicrosoftAzure/MicrosoftAzure-Migrating-Sql-Server-To-Azure-Brazil.html" target="_blank">
                                             <img src="../Themes/MicrosoftAzure/linkedin.png" alt="LinkedIn">
                                         </a>
-                                        <p>Please provide a few additional details and submit.</p>
+                                        <p>
+                                          Por favor, forneça alguns detalhes adicionais e envie.
+                                        </p>
                                     </div>
                                 </div>
                                 <form id="myform">
@@ -144,35 +170,39 @@
                                       <fieldset>
                                         <div class="hidden-inputs ">
                                           <div class="form-row" id="divFirstName">
-                                            <label for="FirstName">First name</label>
+                                            <label for="FirstName">Nome</label>
                                             <span class="form-element" aria-live="polite" aria-atomic="true">
                                               <input aria-required="true" data-val-required="Provide a valid first name." id="FirstName" name="FirstName" type="text" value="" required="required">
                                               <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
                                             </span>
                                           </div>
                                           <div class="form-row" id="divLastName">
-                                            <label for="LastName">Last Name</label>
+                                            <label for="LastName">Sobrenome</label>
                                             <span class="form-element" aria-live="polite" aria-atomic="true">
                                               <input aria-required="true" data-val-required="Provide a valid surname." id="LastName" name="LastName" type="text" value="" required="required">
                                               <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
                                             </span>
                                           </div>
                                           <div class="form-row" id="divEmail">
-                                            <label for="Email">Email Address</label>
+                                            <label for="Email">Email</label>
                                             <span class="form-element" aria-live="polite" aria-atomic="true">
                                               <input aria-required="true" data-val-email="Provide a valid email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" data-val-required="Provide a valid email address." id="Email" name="Email" type="text" value="" required="required">
                                               <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                                             </span>
                                           </div>
                                           <div class="form-row" id="divCompany">
-                                            <label for="Company">Company Name</label>
+                                            <label for="Company">
+                                              Nome da empresa
+                                            </label>
                                             <span class="form-element" aria-live="polite" aria-atomic="true">
                                               <input aria-required="true" data-bi-field1="Company" data-val-required="Provide a valid company name." id="Company" name="Company" type="text" value="" required="required">
                                               <span class="field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true"></span>
                                             </span>
                                           </div>
                                           <div class="form-row" id="divEmployeeSize">
-                                            <label for="Title">Company Size</label><span class="form-element" aria-live="polite" aria-atomic="true">
+                                            <label for="Title">
+                                              Tamanho da empresa
+                                            </label><span class="form-element" aria-live="polite" aria-atomic="true">
                                               <select aria-required="true" data-bi-field2="Job Title" data-val-required="Provide a valid job title." id="EmployeeSize" name="EmployeeSize" required="required">
                                                 <option value="" disabled selected hidden></option>
                                                 <option value="1">1</option>
@@ -187,40 +217,71 @@
                                             </span>
                                           </div>
                                           <div class="form-row" id="divJobTitle">
-                                            <label for="Title">Job Role</label><span class="form-element" aria-live="polite" aria-atomic="true">
+                                            <label for="Title">
+                                              Cargo
+                                            </label>
+                                            <span class="form-element" aria-live="polite" aria-atomic="true">
                                               <select aria-required="true" data-bi-field2="Job Title" data-val-required="Provide a valid job title." id="JobTitle" name="JobTitle" required="required">
                                                 <option value="" disabled selected hidden></option>
-                                                <option value="Owner">Owner</option>
-                                                <option value="Director">Director</option>
-                                                <option value="Manager">Manager</option>
-                                                <option value="Individual Contributor/Staff">Individual Contributor/Staff</option>
-                                                <option value="Developer">Developer</option>
-                                                <option value="Chief Officer">Chief Officer</option>
-                                                <option value="Vice President">Vice President</option>
+                                                <option value="AnalystPress">Analista/Imprensa</option>
+                                                <option value="DeveloperEngineer">Desenvolvedor/Engenheiro</option>
+                                                <option value="Executive">Executivo</option>
+                                                <option value="ItTechnicalManager">Gerente Técnico ou de TI</option>
+                                                <option value="MarketingSales">Marketing/Vendas</option>
+                                                <option value="Other">Outros</option>
+                                                <option value="ResearcherAcademic">Pesquisador/Acadêmico</option>
+                                                <option value="SystemAdministrator">Administrador do Sistema</option>
+                                                <option value="SystemsArchitect">Arquiteto de Soluções/Sistemas</option>
                                               </select> <span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
                                             </span>
                                           </div>
                                           <div class="form-row" id="divCustomQuestion1">
-                                            <label for="Title">Job Department</label><span class="form-element" aria-live="polite" aria-atomic="true">
+                                            <label for="Title">
+                                              Departamento de Emprego
+                                            </label><span class="form-element" aria-live="polite" aria-atomic="true">
                                               <select aria-required="true" data-bi-field2="Job Title" data-val-required="Provide a valid job title." id="CustomQuestion1" name="CustomQuestion1" required="required">
                                                 <option value="" disabled selected hidden></option>
-                                                <option value="Human Resources">Human Resources</option>
-                                                <option value="Sales/Business Development">Sales/Business Development</option>
-                                                <option value="Legal/Compliance">Legal/Compliance</option>
-                                                <option value="Finance">Finance</option>
-                                                <option value="Marketing">Marketing</option>
-                                                <option value="Operations">Operations</option>
-                                                <option value="Data/Business Intelligence">Data/Business Intelligence</option>
-                                                <option value="Security">Security</option>
-                                                <option value="Engineering">Engineering</option>
-                                                <option value="Information Technology">Information Technology</option>
-                                                <option value="Customer Service">Customer Service</option>
-                                                <option value="Owner">Owner</option>
+                                                <option value="Human Resources">
+                                                  Recursos humanos
+                                                </option>
+                                                <option value="Sales/Business Development">
+                                                  Desenvolvimento de negócios/vendas
+                                                </option>
+                                                <option value="Legal/Compliance">
+                                                  Jurídico/compliance
+                                                </option>
+                                                <option value="Finance">
+                                                  Finanças
+                                                </option>
+                                                <option value="Marketing">
+                                                  Marketing
+                                                </option>
+                                                <option value="Operations">
+                                                  Operações
+                                                </option>
+                                                <option value="Data/Business Intelligence">
+                                                  Business Intelligence/dados
+                                                </option>
+                                                <option value="Security">
+                                                  Segurança
+                                                </option>
+                                                <option value="Engineering">
+                                                  Engenharia
+                                                </option>
+                                                <option value="Information Technology">
+                                                  Tecnologia da informação
+                                                </option>
+                                                <option value="Customer Service">
+                                                  Serviço de atendimento ao consumidor
+                                                </option>
+                                                <option value="Owner">
+                                                  Proprietário
+                                                </option>
                                               </select> <span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
                                             </span>
                                           </div>
                                           <div class="form-row " id="divPhone">
-                                            <label for="Phone">Phone</label>
+                                            <label for="Phone">Telefone</label>
                                             <span class="form-element" aria-live="polite" aria-atomic="true">
                                               <input aria-required="true" data-val-required="Provide a valid phone number." id="Phone" name="Phone" type="text" value="" required="required">
                                               <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
@@ -228,11 +289,11 @@
                                           </div>
 
                                         </div>
-                                        <!--<div class="form-row" id="divCountry">
-      <label for="Country">Country/region</label><span class="form-element" aria-live="polite" aria-atomic="true">
+                                        <div class="form-row" id="divCountry">
+                                          <label for="Country">País/Região</label><span class="form-element" aria-live="polite" aria-atomic="true">
           <select aria-required="true" data-dropdown-event="global-form-multiple-changed-countrydropdown" data-dropdown-property="CommonCountryDropdownValue" data-event-property="Country Dropdown" data-val-required="Please select a valid country." id="Country" name="Country" required="required">
               <option value="" disabled selected hidden></option>
-              <option value="Afghanistan">Afghanistan</option>
+              <!--<option value="Afghanistan">Afghanistan</option>
               <option value="Åland Islands">Åland Islands</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -264,9 +325,9 @@
               <option value="Bonaire">Bonaire</option>
               <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
               <option value="Botswana">Botswana</option>
-              <option value="Bouvet Island">Bouvet Island</option>
-              <option value="Brazil">Brazil</option>
-              <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+              <option value="Bouvet Island">Bouvet Island</option>-->
+              <option value="Brazil">Brasil</option>
+              <!--<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
               <option value="British Virgin Islands">British Virgin Islands</option>
               <option value="Brunei">Brunei Darussalam</option>
               <option value="Bulgaria">Bulgaria</option>
@@ -482,36 +543,19 @@
               <option value="Western Sahara">Western Sahara</option>
               <option value="Yemen">Yemen</option>
               <option value="Zambia">Zambia</option>
-              <option value="Zimbabwe">Zimbabwe</option>
+              <option value="Zimbabwe">Zimbabwe</option>-->
           </select> <span class="field-validation-valid" data-valmsg-for="Country" data-valmsg-replace="true"></span>
       </span>
-  </div>-->
+  </div>
 
                                         <div class="share-combined-consent" style="">
-                                          <p>
-                                            <input aria-required="true" data-val="true" data-val-required="The ContactConsent field is required." id="OptIn" name="OptIn" type="checkbox" value="true" required="required">
-                                            <label for="ContactConsent">
-                                              I'd like to receive updates, tips, and offers from Microsoft, and it's OK for Microsoft to share my information with select partners so I can receive relevant information about their products and services. <a href="https://go.microsoft.com/fwlink/?LinkId=521839&amp;clcid=0x809">Privacy statement</a>
-                                            </label>
-                                          </p>
-                                        </div>
-                                        <div class="share-combined-consent" style="">
-                                          <p>
-                                            <input aria-required="true" data-val="true" data-val-required="The ContactConsent field is required." id="CustomQuestion2" name="CustomQuestion2" type="checkbox" value="true" required="required">
-                                            <label for="ContactConsent">
-                                              By checking this box I understand that my information will be transferred to Microsoft.
-                                              I also agree to receive telephone, digital, and postal communications (including email, social, and
-                                              retargeting ads) from Microsoft. I understand I may change my preferences or opt-out
-                                              of communications with Microsoft at any time using the unsubscribe
-                                              link provided <a href="https://go.microsoft.com/fwlink/?LinkId=521839" target="_blank">here</a> and/or in Microsoft’s email communications.
-                                            </label>
-                                          </p>
+                                          <p>Gostaria de receber informações, dicas e ofertas relacionadas ao Microsoft Azure e a outros produtos e serviços da Microsoft.  <a href="https://go.microsoft.com/fwlink/?LinkId=521839&amp;clcid=0x416" target="_blank">Política de Privacidade</a>.</p>
                                         </div>
                                       </fieldset>        
                                         <div class="form-navigation">
                                             <div class="row column row-size2">
-                                                <input name="CampaignName" id="CampaignName" type="hidden" value="MicrosoftAzure_Cloud_Lessons_Learned_17_07_2019" />
-                                                <input type="submit" name="Submit" value="Download" id="Submit" class="button--primary01 button button--primary01" />
+                                                <input name="CampaignName" id="CampaignName" type="hidden" value="MicrosoftAzure_Migrating_Sql_Server_To_Azure_Brazil_19_08_2019" />
+                                                <input type="submit" name="Submit" value="Baixar" id="Submit" class="button--primary01 button button--primary01" />
                                             </div>
                                         </div>
                                     </div>
