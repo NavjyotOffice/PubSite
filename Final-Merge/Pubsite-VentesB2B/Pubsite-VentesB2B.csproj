@@ -486,6 +486,14 @@
     <Content Include="dist\out-tsc\src\polyfills.js" />
     <Content Include="dist\out-tsc\src\test.js" />
     <Content Include="e2e\protractor.conf.js" />
+    <Content Include="Microsoft365\Field-Guide-For-Highly-Regulated-Industries-US.html" />
+    <Content Include="Microsoft365\Field-Guide-For-Highly-Regulated-Industries-US-Thank-You.html" />
+    <Content Include="Microsoft365\Intelligent-meetings-the-before-during-after-guide-Website-Japan.html" />
+    <Content Include="Microsoft365\Intelligent-meetings-the-before-during-after-guide-Website-Japan-Thank-You.html" />
+    <Content Include="Microsoft365\7-Ways-Work-Smarter-Cloud-eBook-Japan.html" />
+    <Content Include="Microsoft365\7-Ways-Work-Smarter-Cloud-eBook-Japan-Thank-You.html" />
+    <Content Include="Microsoft365\SDM-CNTNT-Security-Lessons-Learned-eBook-Japan.html" />
+    <Content Include="Microsoft365\SDM-CNTNT-Security-Lessons-Learned-eBook-Japan-Thank-You.html" />
     <Content Include="Microsoft365\7-Ways-Work-Smarter-Cloud-eBook-250-499-Israel.html" />
     <Content Include="Microsoft365\SDM-CNTNT-Security-Lessons-Learned-eBook-100-249-Israel.html" />
     <Content Include="Microsoft365\SDM-CNTNT-Security-Lessons-Learned-eBook-100-249-Israel-Thank-You.html" />
@@ -506,6 +514,8 @@
     <Content Include="Microsoft365\Business-Leaders-Guide-To-Cultivating-Innovation-UK-Thank-You.html" />
     <Content Include="Microsoft365\10-Myths-About-Moving-To-The-Cloud-UK.html" />
     <Content Include="Microsoft365\10-Myths-About-Moving-To-The-Cloud-UK-Thank-You.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Learn-Azure-In-A-Month-Of-Lunches-Spain.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Learn-Azure-In-A-Month-Of-Lunches-Spain-Thank-You.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Azure-Serverless-Computing-Cookbook-Spain.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Azure-Serverless-Computing-Cookbook-Spain-Thank-You.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Azure-For-Architects-Spain.html" />
@@ -518,6 +528,10 @@
     <Content Include="MicrosoftAzure\MicrosoftAzure-Making-The-Most-Of-The-Cloud-Everywhere-Spain-Thank-You.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Enterprise-Cloud-Strategy-Third-Edition-Spain.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Enterprise-Cloud-Strategy-Third-Edition-Spain-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-eBook-Netherlands-SMC.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-eBook-Netherlands-SMC-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-eBook-Netherlands-SMB.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-eBook-Netherlands-SMB-Thank-You.html" />
     <Content Include="Microsoft\Forrester-Wave-Low-Code-Development-Platforms-Canada.html" />
     <Content Include="Microsoft\IT-Strategy-Driving-Efficiency-Through-Low-Code-App-Development-Canada-Thank-You.html" />
     <Content Include="Microsoft\IT-Strategy-Driving-Efficiency-Through-Low-Code-App-Development-Canada.html" />
@@ -632,6 +646,7 @@
     <Content Include="MicrosoftDynamics\Smarter-Sales-Stack-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Transform-Teamwork-With-Cloud-Solutions-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Transform-Teamwork-With-Cloud-Solutions.html" />
+    <Content Include="PostingLink\OptimalFusion\MWP-M365-SMB-Japan-Oct-Dec-2019.html" />
     <Content Include="PostingLink\OptimalFusion\MWP-M365-SMB-Israel-Oct-Dec-2019.html" />
     <Content Include="PostingLink\OptimalFusion\POWERAPPS-Oct-Dec-2019.html" />
     <Content Include="PostingLink\OptimalFusion\MWP-Oct-Dec-2019.html" />
