@@ -214,6 +214,7 @@
     <Compile Include="Controllers\LandingPageTrackController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ResourcesController.cs" />
+    <Compile Include="Controllers\TrackerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1405,6 +1406,7 @@
     <Content Include="tslint.json" />
     <Content Include="Views\Shared\_PubsiteLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Tracker\GetEmailDetailsWithIP.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
