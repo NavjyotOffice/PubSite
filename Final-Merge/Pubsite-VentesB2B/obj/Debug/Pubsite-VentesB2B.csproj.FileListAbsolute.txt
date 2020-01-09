@@ -461,8 +461,8 @@ F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\bin\Microsoft.O
 F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\bin\Microsoft.Owin.Security.OAuth.xml
 F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\obj\Debug\Pubsite-VentesB2B.csprojAssemblyReference.cache
 F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\obj\Debug\Pubsite-VentesB2B.csproj.CoreCompileInputs.cache
 F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\obj\Debug\Pubsite-VentesB2B.csproj.CopyComplete
 F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\obj\Debug\Pubsite-VentesB2B.dll
 F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\obj\Debug\Pubsite-VentesB2B.pdb
+F:\Demo-Merge-of-Diff-Tech\PubSite\Final-Merge\Pubsite-VentesB2B\obj\Debug\Pubsite-VentesB2B.csprojAssemblyReference.cache
