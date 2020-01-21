@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.4</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -487,6 +487,10 @@
     <Content Include="dist\out-tsc\src\polyfills.js" />
     <Content Include="dist\out-tsc\src\test.js" />
     <Content Include="e2e\protractor.conf.js" />
+    <Content Include="Microsoft365\A-Holistic-Approach-To-Data-Security-Canada.html" />
+    <Content Include="Microsoft365\A-Holistic-Approach-To-Data-Security-Canada-Thank-You.html" />
+    <Content Include="Microsoft365\M365-ABM-Office-365-EMS-Better-Together-Canada-French.html" />
+    <Content Include="Microsoft365\M365-ABM-Office-365-EMS-Better-Together-Canada-French-Thank-You.html" />
     <Content Include="Microsoft365\Crash-Course-In-Microsoft-365-for-Business-Canada-French-Thank-You.html" />
     <Content Include="Microsoft365\Crash-Course-In-Microsoft-365-for-Business-Canada-French.html" />
     <Content Include="Microsoft365\Crash-Course-EBook-Canada-English.html" />
@@ -500,7 +504,7 @@
     <Content Include="Microsoft365\Crash-Course-in-Microsoft-365-for-Business-100-249-Italy.html" />
     <Content Include="Microsoft365\8-Tips-To-Focusing-Your-Compliance-Strategy-ITDM-IT-Pro-Italy.html" />
     <Content Include="Microsoft365\Crash-Course-in-Microsoft-365-for-Business-100-249-Italy-Thank-You.html" />
-    <Content Include="Microsoft365\8-Tips-To-Focusing-Your-Compliance-Strategy-ITDM-IT-Pro-Thank-You.html" />
+    <Content Include="Microsoft365\8-Tips-To-Focusing-Your-Compliance-Strategy-ITDM-IT-Pro-Italy-Thank-You.html" />
     <Content Include="Microsoft365\8-Tips-To-Focusing-Your-Compliance-Strategy-BDM-LoBDM-Italy.html" />
     <Content Include="Microsoft365\8-Tips-To-Focusing-Your-Compliance-Strategy-BDM-LoBDM-Italy-Thank-You.html" />
     <Content Include="Microsoft365\6-critical-steps-on-the-path-to-security-eBook-BDM-LoBDM-Italy.html" />
@@ -567,6 +571,10 @@
     <Content Include="MicrosoftAzure\MicrosoftAzure-BuildCompetitive-Edge-with-SaaS.html" />
     <Content Include="MicrosoftAzure\Making-The-Most-Of-The-Cloud-Everywhere-Japan.html" />
     <Content Include="MicrosoftAzure\Making-The-Most-Of-The-Cloud-Everywhere-Japan-Thank-You.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Migrating-Sql-Server-To-Azure-Netherlands.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Migrating-Sql-Server-To-Azure-Netherlands-Thank-You.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Easier-Path-To-Cloud-For-Legacy-Sql-Server-Netherlands.html" />
+    <Content Include="MicrosoftAzure\MicrosoftAzure-Easier-Path-To-Cloud-For-Legacy-Sql-Server-Netherlands-Thank-You.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Enterprise-Cloud-Strategy-Third-Edition-Japan.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Enterprise-Cloud-Strategy-Third-Edition-Japan-Thank-You.html" />
     <Content Include="MicrosoftAzure\MicrosoftAzure-Grow-Your-ISV-Business-With-SAAS-Canada-Thank-You.html" />
@@ -589,14 +597,46 @@
     <Content Include="MicrosoftDynamics\Beyond-CRM-eBook-Netherlands-SMC-Thank-You.html" />
     <Content Include="MicrosoftDynamics\Beyond-CRM-eBook-Netherlands-SMB.html" />
     <Content Include="MicrosoftDynamics\Beyond-CRM-eBook-Netherlands-SMB-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-ebook-ABM-Australia.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-ebook-ABM-Australia-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Canada-French.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Canada-French-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Netherlands.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Netherlands-Thank-You.html" />
     <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Netherlands-SMC.html" />
     <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Netherlands-SMC-Thank-You.html" />
     <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Netherlands-SMB.html" />
     <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Netherlands-SMB-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-ebook-ABM-UK.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-ebook-ABM-UK-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Brazil.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Brazil-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Brazil.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Brazil-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Germany.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-Germany-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Netherlands.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Netherlands-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Germany.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Germany-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-UK.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-UK-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Australia.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Australia-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Canada.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Canada-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-US.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-US-Thank-You.html" />
     <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Netherlands-SMB.html" />
     <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Netherlands-SMB-Thank-You.html" />
     <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Netherlands-SMC.html" />
     <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-Netherlands-SMC-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Customer-Centricity-ebook-ABM-US.html" />
+    <Content Include="MicrosoftDynamics\Customer-Centricity-ebook-ABM-US-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-France.html" />
+    <Content Include="MicrosoftDynamics\Beyond-CRM-The-CFOs-Guide-to-Driving-Sales-Revenue-France-Thank-You.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-France.html" />
+    <Content Include="MicrosoftDynamics\The-Benefits-of-Aligning-Sales-and-Marketing-ABM-France-Thank-You.html" />
     <Content Include="MicrosoftSurface\Keys-To-Designing-Your-Modern-Workplace-Grow-France.html" />
     <Content Include="MicrosoftSurface\Keys-To-Designing-Your-Modern-Workplace-Grow-France-Thank-You.html" />
     <Content Include="MicrosoftSurface\Keys-To-Designing-Your-Modern-Workplace-General-France.html" />
@@ -720,6 +760,13 @@
     <Content Include="MicrosoftDynamics\Smarter-Sales-Stack-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Transform-Teamwork-With-Cloud-Solutions-Thank-You.html" />
     <Content Include="MicrosoftOffice\MicrosoftOffice-Transform-Teamwork-With-Cloud-Solutions.html" />
+    <Content Include="PostingLink\OptimalFusion\Jan-Mar-2020\MS-Jan-Mar-2020-MWP-Canada.html" />
+    <Content Include="PostingLink\OptimalFusion\Jan-Mar-2020\MS-Jan-Mar-2020-MWP-Italy.html" />
+    <Content Include="PostingLink\OptimalFusion\Jan-Mar-2020\MS-Jan-Mar-2020-MWP-Israel.html" />
+    <Content Include="PostingLink\OptimalFusion\Jan-Mar-2020\MS-Jan-Mar-2020-ABM.html" />
+    <Content Include="PostingLink\OptimalFusion\Jan-Mar-2020\MS-Jan-Mar-2020-ABM-Canada-Netherlands.html" />
+    <Content Include="PostingLink\OptimalFusion\Jan-Mar-2020\MS-Jan-Mar-2020_Surface.html" />
+    <Content Include="PostingLink\OptimalFusion\Jan-Mar-2020\MS-Jan-Mar-2020-Azure.html" />
     <Content Include="PostingLink\OptimalFusion\MWP-M365-SMB-Japan-Oct-Dec-2019.html" />
     <Content Include="PostingLink\OptimalFusion\MWP-M365-SMB-Israel-Oct-Dec-2019.html" />
     <Content Include="PostingLink\OptimalFusion\POWERAPPS-Oct-Dec-2019.html" />
